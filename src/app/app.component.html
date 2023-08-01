@@ -1,32 +1,17 @@
-<h1>Заголовок страницы: {{ title }}</h1>
+<!-- <h1>{{ title | lowercase }}</h1>
+<h1>{{ title | uppercase }}</h1>
+<h1>{{ "какая-то строка" | uppercase }}</h1>
+<h1>{{ "какая-то строка вместе с переменной title " + title | lowercase }}</h1> -->
 
-<div>
-  <p>{{ user.name }}</p>
-  <p>{{ user.age }}</p>
-</div>
+<!-- <h1>{{ "какая-то строка вместе с переменной title" | titlecase }}</h1> -->
 
-<a href="#" [title]="tooltip">Ссылка куда-то</a>
-<br />
-<a href="#" bind-title="tooltip">Ссылка куда-то</a>
+<!-- <p>{{ user | json }}</p> -->
 
-<!-- стили -->
+<!-- <p>{{ "какая-то строка" | slice : 2 }}</p>
+<p>{{ "какая-то строка" | slice : 2 : 6 }}</p> -->
 
-<p class="red">Красный цвет</p>
-<p style="color: red">Красный цвет</p>
-<!-- ============================================== -->
-<p [class]="cssClass">Красный цвет</p>
-<p [style]="inlineStyles">Красный цвет</p>
-<!-- ============================================== -->
+<!-- <p>{{ someDate }}</p>
+<p>{{ someDate | date }}</p>
+<p>{{ someDate | date : "YYYY-MM-DDThh:mm:ssTZD" }}</p> -->
 
-<p [style.width]="'50%'">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, inventore
-  tenetur, doloremque est porro nam reiciendis obcaecati quidem temporibus
-  assumenda perspiciatis. Architecto deleniti minima enim repellat consequatur
-  eligendi facere eaque.
-</p>
-<p [style.width.%]="someNumber">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, inventore
-  tenetur, doloremque est porro nam reiciendis obcaecati quidem temporibus
-  assumenda perspiciatis. Architecto deleniti minima enim repellat consequatur
-  eligendi facere eaque.
-</p>
+<p>{{ someDate | date : "YYYY-MM-DDThh:mm:ssTZD" | slice : 0 : 7 }}</p>
