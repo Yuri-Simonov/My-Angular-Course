@@ -1,17 +1,12 @@
-<!-- <h1>{{ title | lowercase }}</h1>
-<h1>{{ title | uppercase }}</h1>
-<h1>{{ "какая-то строка" | uppercase }}</h1>
-<h1>{{ "какая-то строка вместе с переменной title " + title | lowercase }}</h1> -->
-
-<!-- <h1>{{ "какая-то строка вместе с переменной title" | titlecase }}</h1> -->
-
-<!-- <p>{{ user | json }}</p> -->
-
-<!-- <p>{{ "какая-то строка" | slice : 2 }}</p>
-<p>{{ "какая-то строка" | slice : 2 : 6 }}</p> -->
-
-<!-- <p>{{ someDate }}</p>
-<p>{{ someDate | date }}</p>
-<p>{{ someDate | date : "YYYY-MM-DDThh:mm:ssTZD" }}</p> -->
-
-<p>{{ someDate | date : "YYYY-MM-DDThh:mm:ssTZD" | slice : 0 : 7 }}</p>
+<p>
+  {{
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, quae dolore eaque distinctio ducimus consequatur sed sunt aspernatur illo consequuntur earum ut vel, tempora nemo nobis accusantium fugit obcaecati accusamus."
+      | cutText
+  }}
+</p>
+<p>
+  {{
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, quae dolore eaque distinctio ducimus consequatur sed sunt aspernatur illo consequuntur earum ut vel, tempora nemo nobis accusantium fugit obcaecati accusamus."
+      | cutText : 10
+  }}
+</p>
