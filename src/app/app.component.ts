@@ -6,12 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  ageOfUsers = [{ age: 20 }, { age: 26 }, { age: 22 }];
+  color = 'green';
 
-  constructor() {
-    setTimeout(() => {
-      // this.ageOfUsers.push({age: 16})
-      this.ageOfUsers = [...this.ageOfUsers, { age: 16 }];
-    }, 3000);
+  changeColor(newColor: string) {
+    this.color = newColor;
+  }
+
+  checkCurrentValue(event: Event) {
+    const target = event.target as HTMLInputElement;
+
+    console.log('e', target.value);
   }
 }
