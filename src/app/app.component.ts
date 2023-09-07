@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   color = 'green';
+  parentName: string = 'hello, world!';
 
   changeColor(newColor: string) {
     this.color = newColor;
@@ -16,5 +17,9 @@ export class AppComponent {
     const target = event.target as HTMLInputElement;
 
     console.log('e', target.value);
+  }
+
+  setNewName(newName: string) {
+    this.parentName = newName;
   }
 }

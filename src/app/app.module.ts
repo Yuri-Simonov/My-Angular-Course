@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CutTextPipe } from './pipes/cut-text.pipe';
 import { SortDataPipe } from './pipes/sort-data.pipe';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CutTextPipe,
-    SortDataPipe
+    SortDataPipe,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

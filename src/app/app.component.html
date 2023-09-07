@@ -1,9 +1,23 @@
-<button [style.color]="color" (click)="changeColor('yellow')">Кнопка</button>
-<!-- <button [style.color]="color" on-click="changeColor('yellow')">Кнопка</button> -->
+<!-- <button [style.color]="color" (click)="changeColor('yellow')">Кнопка</button>
+<button [style.color]="color" on-click="changeColor('yellow')">Кнопка</button>
 <p [style.color]="color" (click)="this.color = 'yellow'">Параграф</p>
 
 <input
   type="text"
   (input)="checkCurrentValue($event)"
   (keydown.shift.control.enter)="this.color = 'pink'"
-/>
+/> -->
+
+<!-- <app-child
+  [childColor]="color"
+  [name]="name"
+  (nameChange)="setNewName($event)"
+></app-child> -->
+
+<app-child [childColor]="color" [(name)]="parentName"></app-child>
+
+<p>Имя родительского компонента: {{ parentName }}</p>
+
+<button (click)="setNewName('имя, измененное с помощью родителя')">
+  Родительская кнопка
+</button>
