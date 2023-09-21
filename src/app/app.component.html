@@ -1,23 +1,18 @@
-<!-- <button [style.color]="color" (click)="changeColor('yellow')">Кнопка</button>
-<button [style.color]="color" on-click="changeColor('yellow')">Кнопка</button>
-<p [style.color]="color" (click)="this.color = 'yellow'">Параграф</p>
+<!-- <app-child>
+	<hr>
+	<p style="background-color: lightcoral;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, facere?</p>
+	<div style="background-color: rgb(161, 161, 113);" someAttribute>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, facere?</div>
+	<article style="background-color: lightgreen;" class="some-css-class">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, facere?</article>
+	<hr>
+	<hr>
+	<div class="example">
+		<span>Цвет из родителя {{color}}</span>
+	</div>
+	<hr>
+</app-child> -->
 
-<input
-  type="text"
-  (input)="checkCurrentValue($event)"
-  (keydown.shift.control.enter)="this.color = 'pink'"
-/> -->
-
-<!-- <app-child
-  [childColor]="color"
-  [name]="name"
-  (nameChange)="setNewName($event)"
-></app-child> -->
-
-<app-child [childColor]="color" [(name)]="parentName"></app-child>
-
-<p>Имя родительского компонента: {{ parentName }}</p>
-
-<button (click)="setNewName('имя, измененное с помощью родителя')">
-  Родительская кнопка
-</button>
+<app-child>
+	<app-ng-content-example></app-ng-content-example>
+	<p>text</p>
+	Lorem ipsum dolor sit amet.
+</app-child>

@@ -1,7 +1,16 @@
-<h2 [style.color]="childColorProps">{{ name }}</h2>
+<!-- <header>хедер дочернего компонента
+	<ng-content select="[someAttribute]"></ng-content>
+</header>
+<hr>
+<main>
+	<p>Место, где будет выводиться html-разметка</p>
+	<ng-content select=".some-css-class"></ng-content>
+</main>
+<hr>
+<footer>футер дочернего компонента
+	<ng-content select="p"></ng-content>
+</footer>
 
-<button (click)="changeName()">Изменить имя</button>
+<ng-content select=".example"></ng-content> -->
 
-<p>Имя дочернего компонента: {{ name }}</p>
-
-<button (click)="changeName()">Дочерняя кнопка</button>
+<ng-content select="app-ng-content-example"></ng-content>
