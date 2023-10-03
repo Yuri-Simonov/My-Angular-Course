@@ -1,18 +1,26 @@
-<!-- <app-child>
-	<hr>
-	<p style="background-color: lightcoral;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, facere?</p>
-	<div style="background-color: rgb(161, 161, 113);" someAttribute>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, facere?</div>
-	<article style="background-color: lightgreen;" class="some-css-class">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, facere?</article>
-	<hr>
-	<hr>
-	<div class="example">
-		<span>Цвет из родителя {{color}}</span>
-	</div>
-	<hr>
-</app-child> -->
+<p>Первый параграф!</p>
+<ng-container
+  *ngTemplateOutlet="test; context: { first: 'hello', someText: '!' }"
+>
+  <span>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+    reprehenderit, ipsam beatae explicabo soluta quia itaque ratione a, incidunt
+    magnam placeat suscipit deleniti corporis aliquam voluptate fugit amet vel
+    quibusdam!
+  </span>
+</ng-container>
+<p>Третий параграф!</p>
 
-<app-child>
-	<app-ng-content-example></app-ng-content-example>
-	<p>text</p>
-	Lorem ipsum dolor sit amet.
-</app-child>
+<ng-template
+  #test
+  let-item
+  let-drink
+  let-firstItem="first"
+  let-someText="someText"
+>
+  <p>Второй параграф!</p>
+  <p>{{ firstItem }}</p>
+  <p>{{ item }}</p>
+  <p>{{ drink }}</p>
+  <p>{{ someText }}</p>
+</ng-template>
