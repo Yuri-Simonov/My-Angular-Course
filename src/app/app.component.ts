@@ -6,20 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  color = 'green';
-  parentName: string = 'hello, world!';
+  toggler: boolean = true;
+  str: string = '';
 
-  changeColor(newColor: string) {
-    this.color = newColor;
-  }
-
-  checkCurrentValue(event: Event) {
-    const target = event.target as HTMLInputElement;
-
-    console.log('e', target.value);
-  }
-
-  setNewName(newName: string) {
-    this.parentName = newName;
-  }
+  arr: any[] = ['text', 123, true, [1, 'abc'], NaN, Symbol];
 }
