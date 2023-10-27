@@ -17,9 +17,154 @@
   <span style="color: orangered; margin-left: 20px">{{ currentIndex }}</span>
 </div> -->
 
-<div *ngFor="let item of arr" [ngSwitch]="item">
+<!-- <div *ngFor="let item of arr" [ngSwitch]="item">
+  <i *ngSwitchCase="123">{{ item }}</i>
+  <i *ngSwitchCase="123">{{ item }}</i>
+  <b *ngSwitchCase="true">{{ item }}</b>
+  <span *ngSwitchDefault>{{ item }}</span>
+</div> -->
+
+<!-- ============================================================================= -->
+
+<!-- <button (click)="toggler = !toggler">Кнопка</button>
+
+<p *ngIf="toggler">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam.
+</p>
+
+<ng-template [ngIf]="toggler" [ngIfThen]="test" [ngIfElse]="second">
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam.
+  </p>
+</ng-template>
+
+<ng-template #test>
+  <p>Текст из элемента ng-template</p>
+</ng-template>
+
+<ng-template #second>
+  <p>Текст из второго элемента ng-template</p>
+</ng-template> -->
+
+<!-- ============================================================================= -->
+
+<!-- <div *ngFor="let item of arr; let evenItem = even; let currentIndex = index">
+  <span *ngIf="evenItem">{{ item }}</span>
+  <span style="color: orangered; margin-left: 20px">{{ currentIndex }}</span>
+</div>
+
+<hr />
+
+<ng-template
+  ngFor
+  let-item
+  [ngForOf]="arr"
+  let-evenItem="even"
+  let-currentIndex="index"
+>
+  <div>
+    <span *ngIf="evenItem">{{ item }}</span>
+    <span style="color: orangered; margin-left: 20px">{{ currentIndex }}</span>
+  </div>
+</ng-template> -->
+
+<!-- ============================================================================= -->
+
+<!-- <div *ngFor="let item of arr" [ngSwitch]="item">
   <i *ngSwitchCase="123">{{ item }}</i>
   <i *ngSwitchCase="123">{{ item }}</i>
   <b *ngSwitchCase="true">{{ item }}</b>
   <span *ngSwitchDefault>{{ item }}</span>
 </div>
+
+<hr />
+
+<div *ngFor="let item of arr" [ngSwitch]="item">
+  <ng-template [ngSwitchCase]="123">
+    <i>{{ item }}</i>
+  </ng-template>
+  <i *ngSwitchCase="123">{{ item }}</i>
+  <b *ngSwitchCase="true">{{ item }}</b>
+  <span *ngSwitchDefault>{{ item }}</span>
+</div> -->
+
+<!-- ============================================================================= -->
+
+<!-- <ng-container *ngIf="true">
+  <div *ngFor="let item of arr">
+    <span>{{ item }}</span>
+  </div>
+</ng-container> -->
+
+<!-- ============================================================================= -->
+
+<!-- <button (click)="toggler = !toggler">Кнопка</button>
+
+<p *ngIf="toggler; else second">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam.
+</p>
+
+<ng-template #test>
+  <div>Текст из элемента ng-template</div>
+</ng-template>
+
+<ng-template #second>
+  <span>Текст из второго элемента ng-template</span>
+</ng-template> -->
+
+<!-- ============================================================================= -->
+
+<!-- 
+<button (click)="toggler = !toggler">Кнопка</button>
+
+<p *ngIf="toggler ? true : false">Какой-то текст</p>
+<p *ngIf="toggler && true">Какой-то текст</p>
+<p *ngIf="false || toggler">Какой-то текст</p> -->
+
+<!-- ============================================================================= -->
+
+<!-- <p *ngIf="arr?.[10]">Есть такой элемент в массиве: {{ arr[0] }}</p> -->
+
+<!-- ============================================================================= -->
+
+<!-- 
+<ng-container *ngIf="obj.first.second.third as info">
+  <p>Имя: {{ info.name }}</p>
+  <p>Возраст: {{ info.age }}</p>
+</ng-container>
+
+<div *ngFor="let item of arr; even as evenItem; index as currentIndex">
+  <span *ngIf="evenItem">{{ item }}</span>
+  <span style="color: orangered; margin-left: 20px">{{ currentIndex }}</span>
+</div> -->
+
+<!-- ============================================================================= -->
+
+<!-- <p *ngIf="toggler then test else second">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, magnam.
+</p>
+
+<button (click)="toggler = !toggler">Кнопка</button>
+
+<ng-template #test>
+  <p>Текст из элемента ng-template</p>
+</ng-template>
+
+<ng-template #second>
+  <p>Текст из второго элемента ng-template</p>
+</ng-template> -->
+
+<!-- ============================================================================= -->
+
+<!-- 
+<div *ngFor="let item of arr; even as evenItem; trackBy: someTrackByMethod">
+  <span *ngIf="evenItem">{{ item }}</span>
+</div> -->
+
+<!-- ============================================================================= -->
+
+<!-- <p *ngIf="someAsyncData$ | async">Какие-то асинхронные данные</p> -->
+
+<!-- <div *ngFor="let item of arr | slice : 1 : 4">
+  <span>{{ item }}</span>
+</div> -->

@@ -9,5 +9,22 @@ export class AppComponent {
   toggler: boolean = true;
   str: string = '';
 
-  arr: any[] = ['text', 123, true, [1, 'abc'], NaN, Symbol];
+  arr: any[] = ['text', 123, true, [1, 'abc'], NaN, Symbol]; // length = 6
+
+  obj: any = {
+    first: {
+      second: {
+        third: {
+          age: 11,
+          name: 'Mike',
+        },
+      },
+    },
+  };
+
+  someTrackByMethod(index: number, item: any) {
+    console.log(1);
+
+    return item;
+  }
 }
