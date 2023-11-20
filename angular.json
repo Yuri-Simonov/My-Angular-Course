@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-course-2023:build:production"
+              "buildTarget": "angular-course-2023:build:production"
             },
             "development": {
-              "browserTarget": "angular-course-2023:build:development"
+              "buildTarget": "angular-course-2023:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-course-2023:build"
+            "buildTarget": "angular-course-2023:build"
           }
         },
         "test": {
