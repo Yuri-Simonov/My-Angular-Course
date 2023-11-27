@@ -1,76 +1,121 @@
-<p class="aqua">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
-<p class="aqua">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
+<!-- ====================================================== -->
+<!-- if -->
+<!-- ====================================================== -->
 
-<p [class]="'aqua'">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
+<!-- <button (click)="toggler = !toggler">Кнопка</button> -->
 
-<p [class]="'aqua red green'">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
+<!-- <p *ngIf="toggler">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, tempore.
+</p> -->
 
-<p [class]="color">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
+<!-- @if (toggler) {
+  <p class="aqua">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, tempore.
+  </p>
+} -->
 
-<p [class]="['aqua', 'red', color, 'green']">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
+<!-- === -->
+<!-- <p *ngIf="toggler; else test">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, tempore.
 </p>
 
-<p [class]="{ green: true, color: false }">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
+<ng-template #test>
+  <p>Текст из ng-template</p>
+</ng-template>
 
-<p [class]="{ 'green red pink': true, color: false }">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, expedita?
-</p>
+@if (toggler) {
+  <p class="aqua">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, tempore.
+  </p>
+} @else {
+  <p class="aqua">Текст из else</p>
+} -->
 
-<!-- ============================  -->
+<!-- @if (toggler) {
+  <p class="aqua">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, tempore.
+  </p>
+} @else if (true) {
+  <p class="aqua">Еще одно условие</p>
+} @else if (true) {
+  <p class="aqua">Еще одно условие</p>
+} @else {
+  <p class="aqua">Текст из else</p>
+} -->
 
-<p style="background: red">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
+<hr />
+<!-- ====================================================== -->
+<!-- for -->
+<!-- ====================================================== -->
 
-<p [style]="'background: red'">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
+<!-- <div *ngFor="let item of arr; trackBy: someTrackByMethod">
+  <span>{{ item }}</span>
+</div> -->
 
-<!-- <p ngStyle="background: red">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
+<!-- @for (item of arr; track item) {
+  <div class="aqua">
+    <span>{{ item }}</span>
+  </div>
+} -->
 
-<p [ngStyle]="'background: red'">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>  -->
+<!-- @for (item of arr; track item; let i = $index) {
+  <div class="aqua">
+    <span>{{ i }}</span>
+  </div>
+}
+<hr />
+@for (item of arr; track item) {
+  <div class="aqua">
+    <span>{{ $index }}</span>
+  </div>
+} -->
 
-<p [ngStyle]="{color, background1: 'red'}">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
+<!-- @for (item of arr; track item; let parentIndex = $index) {
+  @for (item of arr; track item; let childIndex = $index) {
+    <div class="aqua">
+      <span>{{ childIndex }}</span>
+    </div>
+  }
+} -->
 
-<p [ngStyle]="cssProperties">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
+<!-- @for (item of []; track item) {
+  <div class="aqua">
+    <span>{{ item }}</span>
+  </div>
+} @empty {
+  <p class="aqua">Массив пустой</p>
+} -->
 
-<p [style]="{color, background1: 'red'}">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
+<hr />
+<!-- ====================================================== -->
+<!-- switch/case -->
+<!-- ====================================================== -->
+<div *ngFor="let item of arr" [ngSwitch]="item">
+  <i *ngSwitchCase="123">{{ item }}, </i>
+  <i *ngSwitchCase="123">{{ item }}, </i>
+  <i *ngSwitchCase="123">{{ item }}, </i>
+  <b *ngSwitchCase="true">{{ item }}, </b>
+  <span *ngSwitchDefault>{{ item }}, </span>
+</div>
 
-<p [style]="cssProperties">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
-
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, tempore.
-</p>
-
-<p [style.font-size.px]="20">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, commodi.
-</p>
-
-<p [ngStyle]="{ 'font-size.px': 20 }">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, commodi.
-</p>
+@for (item of arr; track $index) {
+  <div class="aqua">
+    @switch (item) {
+      @case (123) {
+        <i>{{ item }}, </i>
+      }
+      @case (123) {
+        <i>{{ item }}, </i>
+      }
+      @case (123) {
+        <i>{{ item }}, </i>
+      }
+      @case (true) {
+        <b>{{ item }}, </b>
+      }
+      @default {
+        <span>{{ item }}</span>
+      }
+    }
+  </div>
+}

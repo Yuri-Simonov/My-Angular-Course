@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  color: string = 'orange';
+  toggler: boolean = true;
+  arr: any[] = ['text', 123, true, [1, 'abc'], { key: 'key' }, NaN, Symbol];
 
-  cssProperties = { color: 'orange', background: 'green' };
+  someTrackByMethod(index: number, item: any) {
+    console.log(1);
+
+    return item;
+  }
 }
