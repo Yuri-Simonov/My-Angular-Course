@@ -6,12 +6,48 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title: string = 'Заголовок';
+  name: string = 'Имя';
   toggler: boolean = true;
-  arr: any[] = ['text', 123, true, [1, 'abc'], { key: 'key' }, NaN, Symbol];
+  obj = { age: 12 };
 
-  someTrackByMethod(index: number, item: any) {
-    console.log(1);
-
-    return item;
+  constructor() {
+    // setTimeout(() => {
+    //   this.title = 'Другой заголовок';
+    //   //   this.obj.age = 10;
+    //   this.obj = { ...this.obj, age: 10 };
+    // }, 3000);
+    // console.log(
+    //   '%c Компонент app-root успешно создан! ',
+    //   'background: darkgreen',
+    // );
   }
+
+  //   ngOnChanges(): void {
+  //     console.log('%c родительский ngOnChanges ', 'color: aqua');
+  //   }
+
+  //   ngOnInit(): void {
+  //     console.log('%c родительский ngOnInit ', 'color: deepskyblue');
+  //   }
+
+  //   ngDoCheck(): void {
+  //     console.log('%c родительский ngDoCheck ', 'color: pink');
+  //   }
+
+  //   ngAfterContentInit(): void {
+  //     console.log('%c родительский ngAfterContentInit ', 'color: lightgreen');
+  //   }
+
+  //   ngAfterContentChecked(): void {
+  //     console.log('%c родительский ngAfterContentChecked ', 'color: green');
+  //   }
+
+  //   ngAfterViewInit(): void {
+  //     console.log('%c родительский ngAfterViewInit ', 'color: yellow');
+  //   }
+
+  //   ngAfterViewChecked(): void {
+  //     console.log('%c родительский ngAfterViewChecked ', 'color: orange');
+  //   }
 }
