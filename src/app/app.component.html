@@ -1,5 +1,23 @@
-@if (toggler) {
-  <app-child [title]="title" [name]="name" [obj]="obj"></app-child>
-}
+<p #paragrath>Просто параграф</p>
 
-<button (click)="toggler = !toggler">Toggler</button>
+<ng-template #template>
+  <p>Содержмимое внутри ng-template</p>
+</ng-template>
+<ng-container *ngTemplateOutlet="template"></ng-container>
+
+<!-- <app-child #component>Lorem ipsum dolor</app-child> -->
+<!-- <app-child>Lorem ipsum dolor</app-child> -->
+<app-child #paragrath>Lorem ipsum dolor</app-child>
+
+<!-- ======================================= -->
+
+<p #paragrath>Просто параграф</p>
+
+<ng-template #template>
+  <p>Содержмимое внутри ng-template</p>
+</ng-template>
+<ng-container *ngTemplateOutlet="template"></ng-container>
+
+<!-- <app-child #component>Lorem ipsum dolor</app-child> -->
+<!-- <app-child>Lorem ipsum dolor</app-child> -->
+<app-child #paragrath>Lorem ipsum dolor</app-child>
