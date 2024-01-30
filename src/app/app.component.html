@@ -1,23 +1,26 @@
-<p #paragrath>Просто параграф</p>
-
-<ng-template #template>
-  <p>Содержмимое внутри ng-template</p>
-</ng-template>
-<ng-container *ngTemplateOutlet="template"></ng-container>
-
-<!-- <app-child #component>Lorem ipsum dolor</app-child> -->
-<!-- <app-child>Lorem ipsum dolor</app-child> -->
-<app-child #paragrath>Lorem ipsum dolor</app-child>
-
-<!-- ======================================= -->
-
-<p #paragrath>Просто параграф</p>
-
-<ng-template #template>
-  <p>Содержмимое внутри ng-template</p>
-</ng-template>
-<ng-container *ngTemplateOutlet="template"></ng-container>
-
-<!-- <app-child #component>Lorem ipsum dolor</app-child> -->
-<!-- <app-child>Lorem ipsum dolor</app-child> -->
-<app-child #paragrath>Lorem ipsum dolor</app-child>
+<app-child> Обычный текст </app-child>
+<!-- ===================================== -->
+<app-child>
+  <p #tag>Параграф</p>
+</app-child>
+<!-- <app-child>
+  <ng-template #tag>
+    <p>Элемент ng-template</p>
+  </ng-template>
+</app-child> -->
+<!-- ===================================== -->
+<app-child>
+  <ng-template>
+    <p>Элемент ng-template</p>
+  </ng-template>
+</app-child>
+<!-- ===================================== -->
+<app-child>
+  <app-ng-content-example>Компонент ng-content-example </app-ng-content-example>
+  <app-ng-content-example
+    >Компонент ng-content-example
+    <app-ng-content-example #descendants
+      >Компонент ng-content-example
+    </app-ng-content-example>
+  </app-ng-content-example>
+</app-child>
