@@ -4,8 +4,10 @@
 </p> -->
 <p
   [appCustomDirective]="colorProperty"
-  someDirective
+  #example="custom"
   (colorChange)="setColor($event)"
 >
   Параграф с директивой
 </p>
+
+<app-child [style]="{ color: example.getRandomColor() }"></app-child>

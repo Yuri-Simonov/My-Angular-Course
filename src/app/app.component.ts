@@ -6,7 +6,7 @@ import { Component, HostBinding, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  colorProperty: string = 'orange';
+  colorProperty: string = 'transparent';
 
   setColor(newColor: string) {
     this.colorProperty = newColor;
