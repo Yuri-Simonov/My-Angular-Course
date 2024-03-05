@@ -1,13 +1,7 @@
-<p>Параграф без директивы</p>
-<!-- <p appCustomDirective style="color: lime" [color]="colorProperty" class="color">
-  Параграф с директивой
-</p> -->
-<p
-  [appCustomDirective]="colorProperty"
-  #example="custom"
-  (colorChange)="setColor($event)"
->
-  Параграф с директивой
-</p>
+<button (click)="toggler = !toggler">Кнопка</button>
 
-<app-child [style]="{ color: example.getRandomColor() }"></app-child>
+<p>Параграф без директивы</p>
+<p *appCustomDirective="toggler; let time = time; hello: 'world'">
+  <span>Параграф с директивой</span><br />
+  <span>{{ time | date: "hh:mm:ss" }}</span>
+</p>

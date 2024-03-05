@@ -1,4 +1,4 @@
-import { Component, HostBinding, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,15 +6,5 @@ import { Component, HostBinding, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  colorProperty: string = 'transparent';
-
-  setColor(newColor: string) {
-    this.colorProperty = newColor;
-  }
-
-  @HostBinding('style.background') bgColor = 'transparent';
-
-  @HostListener('click') handleClick(data: any) {
-    console.log('click from AppComponent');
-  }
+  toggler: boolean = true;
 }

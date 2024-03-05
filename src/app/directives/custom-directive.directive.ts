@@ -1,69 +1,32 @@
-import {
-  Directive,
-  ElementRef,
-  EventEmitter,
-  HostBinding,
-  HostListener,
-  Input,
-  Output,
-} from '@angular/core';
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appCustomDirective]',
   exportAs: 'custom',
 })
 export class CustomDirectiveDirective {
-  @Input('color') colorProps!: string;
-  @Input('appCustomDirective') appCustomDirectiveProps!: string;
+  @Input() appCustomDirective: any;
+  @Input() appCustomDirectiveHello: any;
 
-  @Output() colorChange = new EventEmitter();
+  time!: Date;
 
-  constructor(private element: ElementRef) {
-    console.log('appCustomDirective');
-    console.log('element', this.element);
+  constructor(
+    private template: TemplateRef<any>,
+    private viewContainer: ViewContainerRef,
+  ) {}
 
-    this.element.nativeElement.style.color = 'red';
-  }
-
-  @HostBinding('style.color') color: string = 'lime';
-  @HostBinding('attr.color') attr: string = 'lime';
-  @HostBinding('class.color') class: boolean = true;
-  @HostBinding('style.background') bgColor = 'transparent';
-
-  //   @HostBinding('style.color') color = null; // или undefined
-  //   @HostBinding('attr.color') attr: any;
-  //   @HostBinding('class.color') class = false;
-
-  //   @HostListener('document:click', ['$event.target']) handleClick(data: any) {
-  //     // console.log('click!');
-  //     console.log('data', data);
-  //   }
-
-  @HostListener('click') handleClick(data: any) {
-    this.getRandomColor();
-  }
-
-  //   @HostListener('mouseenter') handleMouseenter(data: any) {
-  //     this.bgColor = 'orange';
-  //   }
-  //   @HostListener('mouseleave') handleMouseleave(data: any) {
-  //     this.bgColor = 'transparent';
+  //   ngOnInit() {
+  //     this.viewContainer.createEmbeddedView(this.template);
   //   }
 
   ngOnChanges() {
-    console.log('colorProps', this.colorProps);
-    console.log('appCustomDirectiveProps', this.appCustomDirectiveProps);
+    console.log('hello', this.appCustomDirectiveHello);
 
-    this.bgColor = this.appCustomDirectiveProps;
-  }
-
-  getRandomColor() {
-    const newColor =
-      '#' +
-      (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
-
-    this.colorChange.emit(newColor);
-
-    return newColor;
+    this.time = new Date();
+    this.appCustomDirective
+      ? this.viewContainer.createEmbeddedView(this.template, {
+          time: this.time,
+        })
+      : this.viewContainer.clear();
   }
 }
