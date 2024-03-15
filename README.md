@@ -22,4 +22,5 @@
 18. [Декораторы свойств ContentChild и ContentChildren](https://youtu.be/zKvPvfkbHrw);
 19. [Создание кастомных атрибутивных директив | HostBinding и HostListener](https://youtu.be/qHfHV5Ej4pg);
 20. [Свойство exportAs](https://youtu.be/7W-EMTHV8dQ);
-21. [Создание кастомных структурных директив](https://youtu.be/U16l0-Aoy5Y).
+21. [Создание кастомных структурных директив](https://youtu.be/U16l0-Aoy5Y);
+22. [Динамические компоненты](https://youtu.be/GC6H9NF9w1o).

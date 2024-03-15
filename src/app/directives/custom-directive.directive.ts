@@ -1,32 +1,14 @@
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, ViewContainerRef } from '@angular/core';
+import { DynamicComponent } from '../components/dynamic/dynamic.component';
 
 @Directive({
   selector: '[appCustomDirective]',
   exportAs: 'custom',
 })
 export class CustomDirectiveDirective {
-  @Input() appCustomDirective: any;
-  @Input() appCustomDirectiveHello: any;
+  constructor(private viewContainer: ViewContainerRef) {}
 
-  time!: Date;
-
-  constructor(
-    private template: TemplateRef<any>,
-    private viewContainer: ViewContainerRef,
-  ) {}
-
-  //   ngOnInit() {
-  //     this.viewContainer.createEmbeddedView(this.template);
-  //   }
-
-  ngOnChanges() {
-    console.log('hello', this.appCustomDirectiveHello);
-
-    this.time = new Date();
-    this.appCustomDirective
-      ? this.viewContainer.createEmbeddedView(this.template, {
-          time: this.time,
-        })
-      : this.viewContainer.clear();
+  ngOnInit() {
+    this.viewContainer.createComponent(DynamicComponent);
   }
 }

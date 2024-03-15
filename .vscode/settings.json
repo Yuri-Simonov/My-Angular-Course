@@ -1,6 +1,12 @@
 {
-  "editor.fontSize": 24,
+  "editor.fontSize": 20,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.codeLensFontSize": 0,
+  "editor.inlayHints.fontSize": 0,
+  "editor.minimap.size": "proportional",
+  "editor.mouseWheelZoom": false,
+  "terminal.integrated.mouseWheelZoom": false,
+  "window.zoomLevel": 2
 }
