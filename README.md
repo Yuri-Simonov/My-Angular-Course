@@ -25,4 +25,5 @@
 21. [Создание кастомных структурных директив](https://youtu.be/U16l0-Aoy5Y);
 22. [Динамические компоненты](https://youtu.be/GC6H9NF9w1o);
 23. [Standalone компоненты и Shared модуль](https://youtu.be/mDdCB2oR9IE);
-24. [Standalone компоненты и tree-shaking](https://youtu.be/ca2zuEDsDhs).
+24. [Standalone компоненты и tree-shaking](https://youtu.be/ca2zuEDsDhs);
+25. [Глобальные стили и виды инкапсуляций стилей | Encapsulation | ViewEncapsulation](https://youtu.be/5sx8_jKl5GU).

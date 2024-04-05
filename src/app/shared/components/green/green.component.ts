@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RedComponent } from '../red/red.component';
 import { CommonModule } from '@angular/common';
 
@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './green.component.html',
   styleUrl: './green.component.scss',
   standalone: true,
-  imports: [RedComponent, CommonModule],
+  //   imports: [RedComponent, CommonModule],
+  encapsulation: ViewEncapsulation.None,
 })
 export class GreenComponent {}
