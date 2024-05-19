@@ -1,0 +1,28 @@
+:host {
+  color: cyan;
+  display: block;
+}
+
+:host(.orange) {
+  color: orange;
+}
+
+:host(.orange.red) {
+  color: red;
+}
+
+:host-context {
+  background-color: darkblue;
+}
+
+:host-context(.orange) {
+  background-color: lime;
+}
+
+:host-context(app-root) {
+  background-color: darkred;
+}
+
+:host-context(h1) {
+  background-color: black;
+}
