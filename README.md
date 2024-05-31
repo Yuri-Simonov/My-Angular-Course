@@ -26,4 +26,6 @@
 22. [Динамические компоненты](https://youtu.be/GC6H9NF9w1o);
 23. [Standalone компоненты и Shared модуль](https://youtu.be/mDdCB2oR9IE);
 24. [Standalone компоненты и tree-shaking](https://youtu.be/ca2zuEDsDhs);
-25. [Глобальные стили и виды инкапсуляций стилей | Encapsulation | ViewEncapsulation](https://youtu.be/5sx8_jKl5GU).
+25. [Глобальные стили и виды инкапсуляций стилей | Encapsulation | ViewEncapsulation](https://youtu.be/5sx8_jKl5GU);
+26. [Селекторы стилей host, host-context и ng-deep в Angular](https://youtu.be/1GlMQJmSla0);
+27. [Свойство host декоратора Directive в Angular](https://youtu.be/Do99IohSCSw).

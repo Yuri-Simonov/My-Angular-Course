@@ -1,13 +1,53 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { RedComponent } from '../red/red.component';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-green',
   templateUrl: './green.component.html',
   styleUrl: './green.component.scss',
   standalone: true,
-  //   imports: [RedComponent, CommonModule],
-  encapsulation: ViewEncapsulation.None,
+  host: {
+    /**
+     * Статические варианты записей
+     */
+    // style: 'color: lime',
+    // class: 'some-css-class',
+    // color: 'some-attr-data',
+    // color: '',
+    /**
+     * Динамические варианты записей
+     */
+    // '[style.color]': '"lime"',
+    // '[style.width.%]': '20',
+    // '[class.some-css-class]': 'true',
+    // '[attr.color]': '"some-attr-data"',
+    // '[attr.color]': '""',
+    '[style.color]': 'inlineStyle',
+    // '[style.color]': '!true ? "green" : "red"',
+    '[attr.color]': 'appCustomDirective',
+    // '(document:click)': 'changeColor($event, true)',
+    '(document:click)': 'true && changeColor($event, true)',
+  },
 })
-export class GreenComponent {}
+export class GreenComponent {
+  inlineStyle: string = 'orange';
+
+  @Input() appCustomDirective!: string;
+
+  //   @HostListener('document:click') handleClick() {
+  //     this.changeColor();
+  //   }
+
+  //   ngOnInit() {
+  //     setInterval(() => {
+  //       this.changeColor();
+  //     }, 1000);
+  //   }
+
+  changeColor(...args: any) {
+    console.log('args', args);
+
+    this.inlineStyle =
+      '#' +
+      (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+  }
+}
