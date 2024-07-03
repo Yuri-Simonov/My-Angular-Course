@@ -29,4 +29,5 @@
 25. [Глобальные стили и виды инкапсуляций стилей | Encapsulation | ViewEncapsulation](https://youtu.be/5sx8_jKl5GU);
 26. [Селекторы стилей host, host-context и ng-deep в Angular](https://youtu.be/1GlMQJmSla0);
 27. [Свойство host декоратора Directive в Angular](https://youtu.be/Do99IohSCSw);
-28. [Обновление Angular до 18-ой версии. Дефолтное значение для элемента ng-content](https://youtu.be/RvxHBg7izVw).
+28. [Обновление Angular до 18-ой версии. Дефолтное значение для элемента ng-content](https://youtu.be/RvxHBg7izVw);
+29. [Основы RxJS: класс Observable, методы pipe и subscribe в Angular](https://youtu.be/vHDtZp2QltI).
