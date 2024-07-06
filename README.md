@@ -30,4 +30,5 @@
 26. [Селекторы стилей host, host-context и ng-deep в Angular](https://youtu.be/1GlMQJmSla0);
 27. [Свойство host декоратора Directive в Angular](https://youtu.be/Do99IohSCSw);
 28. [Обновление Angular до 18-ой версии. Дефолтное значение для элемента ng-content](https://youtu.be/RvxHBg7izVw);
-29. [Основы RxJS: класс Observable, методы pipe и subscribe в Angular](https://youtu.be/vHDtZp2QltI).
+29. [Основы RxJS: класс Observable, методы pipe и subscribe в Angular](https://youtu.be/vHDtZp2QltI);
+30. [Создание Observable в RxJS. Операторы of, from, fromEvent и interval в RxJS Angular](https://youtu.be/A-3UoqDqkyU).

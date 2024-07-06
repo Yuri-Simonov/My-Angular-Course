@@ -1,2 +1,16 @@
-<app-child></app-child>
-<app-child><p>Какие-то данные</p></app-child>
+<!-- <h1>Текущее значение: {{ exampleObservable$ | async }}</h1> -->
+
+@if (exampleObservable$ | async; as data) {
+<h1>Предыдущее значение: {{ data.previousValue }}</h1>
+<h1>Текущее значение: {{ data.currentValue }}</h1>
+<h1>Следующее значение: {{ data.nextValue }}</h1>
+
+<app-child [currentValue]="data.currentValue"></app-child>
+}
+
+<!-- <app-child
+    [currentValue]="(exampleObservable$ | async).currentValue"
+></app-child> -->
+
+<h1>{{ examplePromise$ | async }}</h1>
+<app-child [currentValue]="examplePromise$ | async"></app-child>

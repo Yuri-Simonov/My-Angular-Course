@@ -1,46 +1,33 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ChildComponent } from './components/child/child.component';
-import { Observable, from, fromEvent, interval, map, of } from 'rxjs';
+import { interval, map, Observable } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, ChildComponent],
+    imports: [RouterOutlet, ChildComponent, AsyncPipe],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
-    numberObservable$: Observable<number> = new Observable((sub) => {
-        sub.next(1);
-        sub.next(2);
-        sub.next(3);
-        sub.next(4);
-        sub.next(5);
-        sub.complete();
-    });
+    exampleObservable$!: Observable<any>;
+    examplePromise$!: Promise<any>;
 
     ngOnInit() {
-        this.numberObservable$.subscribe(console.log);
+        this.exampleObservable$ = interval(1000).pipe(
+            map((value) => ({
+                previousValue: value - 1,
+                currentValue: value,
+                nextValue: value + 1,
+            }))
+        );
 
-        console.log('==============');
-
-        of(1, 2, 3, 4, 5)
-            .pipe(map((item) => item * 10))
-            .subscribe(console.log);
-
-        console.log('==============');
-
-        from([1, 2, 3, 4, 5])
-            .pipe(map((item) => item * 10))
-            .subscribe(console.log);
-
-        console.log('==============');
-
-        fromEvent(document, 'click').subscribe(console.log);
-
-        console.log('==============');
-
-        interval(1000).subscribe(console.log);
+        this.examplePromise$ = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('Promise успешно выполнился');
+            }, 3000);
+        });
     }
 }
