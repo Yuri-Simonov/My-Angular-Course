@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-child',
@@ -6,7 +6,12 @@ import { Component, Input } from '@angular/core';
     imports: [],
     templateUrl: './child.component.html',
     styleUrl: './child.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChildComponent {
-    @Input() currentValue!: number;
+    @Input() number!: number;
+
+    ngDoCheck() {
+        console.log('ngDoCheck app-child');
+    }
 }

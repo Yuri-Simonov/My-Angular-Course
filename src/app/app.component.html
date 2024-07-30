@@ -1,16 +1,11 @@
-<!-- <h1>Текущее значение: {{ exampleObservable$ | async }}</h1> -->
+<h1>{{ title }}</h1>
 
-@if (exampleObservable$ | async; as data) {
-<h1>Предыдущее значение: {{ data.previousValue }}</h1>
-<h1>Текущее значение: {{ data.currentValue }}</h1>
-<h1>Следующее значение: {{ data.nextValue }}</h1>
+<!-- @if (interval$ | async; as number) {
+<app-child [number]="number"></app-child>
+} -->
 
-<app-child [currentValue]="data.currentValue"></app-child>
-}
+<!-- <button (click)="handleClick()">Click</button> -->
 
-<!-- <app-child
-    [currentValue]="(exampleObservable$ | async).currentValue"
-></app-child> -->
+<!-- <h2>{{ interval$ | async }}</h2> -->
 
-<h1>{{ examplePromise$ | async }}</h1>
-<app-child [currentValue]="examplePromise$ | async"></app-child>
+<h2>{{ signal() }}</h2>
