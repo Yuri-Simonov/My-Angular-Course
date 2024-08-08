@@ -31,4 +31,7 @@
 27. [Свойство host декоратора Directive в Angular](https://youtu.be/Do99IohSCSw);
 28. [Обновление Angular до 18-ой версии. Дефолтное значение для элемента ng-content](https://youtu.be/RvxHBg7izVw);
 29. [Основы RxJS: класс Observable, методы pipe и subscribe в Angular](https://youtu.be/vHDtZp2QltI);
-30. [Создание Observable в RxJS. Операторы of, from, fromEvent и interval в RxJS Angular](https://youtu.be/A-3UoqDqkyU).
+30. [Создание Observable в RxJS. Операторы of, from, fromEvent и interval в RxJS Angular](https://youtu.be/A-3UoqDqkyU);
+31. [Асинхронные пайпы в Angular. AsyncPipe in Angular](https://youtu.be/FYu84AqyQW8);
+32. [Механизм Change Detection в Angular. Принцип работы и его оптимизация](https://youtu.be/TP0PIFVQjJg);
+33. [Класс ChangeDetectorRef в Angular. Управление механизмом Change Detection]().
