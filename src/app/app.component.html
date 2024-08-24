@@ -1,11 +1,25 @@
-<!-- <h1>{{ title }}</h1> -->
+<!-- Если механизм Change Detection проверяет компонент на изменения, -->
+<!-- то метод colorize будет вызван -->
+{{ colorize() }}
 
-<!-- @if (interval$ | async; as number) {
-<app-child [number]="number"></app-child>
-} -->
+<h1>Инициализация приложения</h1>
+<!-- <h1>Пример 1. Все компоненты приложения имеют стратегию Default</h1> -->
+<!-- <h1>Пример 2. Все компоненты приложения имеют стратегию OnPush</h1> -->
+<!-- <h1>
+    Пример 3. Получение новых данных от родителя через декоратор &#64;Input()
+</h1> -->
+<!-- <h1>Пример 4. Асинхронная пайпа (Async Pipe)</h1> -->
+<!-- <h1>Пример 5. Сигналы</h1> -->
+<!-- <h1>Пример 6. Метод detach</h1> -->
+<!-- <h1>Пример 7. Метод reattach</h1> -->
+<!-- <h1>Пример 8. Метод detectChanges</h1> -->
+<!-- <h1>Пример 9. Метод detectChanges в связке с методом detach</h1> -->
+<!-- <h1>Пример 10. Метод markForCheck</h1> -->
 
-<app-child [number]="15"></app-child>
+<button (click)="handleClick()">AppComponent</button>
 
-<!-- <button (click)="handleClick()">Click</button> -->
-
-<!-- <h2>{{ interval$ | async }}</h2> -->
+<div class="tree tree_root">
+    <app-header></app-header>
+    <!-- <app-header [counter]="counter"></app-header> -->
+    <app-main></app-main>
+</div>

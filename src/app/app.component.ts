@@ -1,46 +1,36 @@
-import { interval } from 'rxjs';
 import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
+    ElementRef,
 } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ChildComponent } from './components/child/child.component';
-import { AsyncPipe } from '@angular/common';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { ColorizeComponent } from './components/colorize/colorize.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, ChildComponent, AsyncPipe],
+    imports: [HeaderComponent, MainComponent, ColorizeComponent],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-    title: string = 'Hello, world!';
-    interval$ = interval(1000);
+export class AppComponent extends ColorizeComponent {
+    counter: number = 0;
 
-    constructor(private cdr: ChangeDetectorRef) {
-        // this.cdr.detach();
-    }
-
-    ngDoCheck() {
-        console.log('ngDoCheck app-root');
-    }
-
-    ngAfterViewInit() {
-        console.log('ngAfterViewInit app-root');
-
-        setTimeout(() => {
-            this.title = 'Привет, мир!';
-            // this.cdr.detach();
-        }, 3000);
-        setTimeout(() => {
-            // this.cdr.reattach();
-        }, 6000);
+    constructor(element: ElementRef, private cdr: ChangeDetectorRef) {
+        super(element);
     }
 
     handleClick() {
-        console.log('handleClick');
+        console.log('AppComponent', this.element);
+        this.counter++;
+    }
+
+    ngAfterViewInit() {
+        // this.cdr.detach();
+        // setTimeout(() => {
+        //     this.cdr.reattach();
+        // }, 10000);
     }
 }

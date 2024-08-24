@@ -1,0 +1,135 @@
+// Общие стили
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #414141;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+button {
+    /* Убираем дефолтные стили */
+    margin: 0; /* Убираем внешние отступы */
+    border: 2px solid white;
+    background: none; /* Убираем фон */
+    font: inherit; /* Наследуем шрифт от родителя */
+    color: inherit; /* Наследуем цвет текста от родителя */
+    text-align: inherit; /* Наследуем выравнивание текста */
+    line-height: 40px; /* Наследуем межстрочный интервал */
+    cursor: pointer; /* Делаем кнопку кликабельной */
+    appearance: none; /* Убираем стандартный вид для кнопок в Safari */
+    border-radius: 5px;
+}
+button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+button:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+button::-moz-focus-inner {
+    border: 0; /* Убираем внутреннюю границу в Firefox при фокусе */
+    padding: 0; /* Убираем внутренние отступы в Firefox при фокусе */
+}
+
+// Стили анимации
+button {
+    transition: 1s; /* Плавный переход для фона */
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+app-root,
+app-header,
+app-main,
+app-articles,
+app-logo,
+app-navigation,
+app-sidebar {
+    button {
+        background-color: #6200ea; /* Начальный цвет кнопки */
+        color: white;
+    }
+
+    &.colorize > button {
+        background-color: greenyellow; /* Цвет подсветки */
+        color: gray;
+    }
+}
+
+// Стили дерева компонентов
+.tree {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    & > *:first-child,
+    & > *:last-child {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -1rem;
+            z-index: -1;
+            height: 2px;
+            width: 3rem;
+            background-color: white;
+        }
+    }
+
+    & > *:first-child {
+        &::after {
+            left: 60%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    & > *:last-child {
+        &::after {
+            left: 40%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    &.tree_root {
+        & > *:first-child,
+        & > *:last-child {
+            &::after {
+                width: 5rem;
+            }
+        }
+
+        & > *:first-child {
+            &::after {
+                left: 78%;
+                transform: translate(-50%, -50%) rotate(-25deg);
+            }
+        }
+
+        & > *:last-child {
+            &::after {
+                left: 22%;
+                transform: translate(-50%, -50%) rotate(25deg);
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(./styles/font.scss);
+@import url(./styles/lesson-34.scss);
 
-body {
-  background-color: rgb(50, 50, 50);
-  color: white;
+html {
+    font-family: Roboto;
 }
