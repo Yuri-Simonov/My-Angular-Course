@@ -14,7 +14,7 @@ import { ColorizeComponent } from '../colorize/colorize.component';
     standalone: true,
     imports: [ArticlesComponent, SidebarComponent, ColorizeComponent],
     templateUrl: './navigation.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavigationComponent extends ColorizeComponent {
     flag = false;
@@ -25,9 +25,13 @@ export class NavigationComponent extends ColorizeComponent {
         private markForCheckTogglerService: MarkForCheckTogglerService
     ) {
         super(element);
+        setTimeout(() => {
+            this.cdr.markForCheck();
+            console.log('markForCheck');
+        }, 3000);
 
         this.markForCheckTogglerService.flag$.subscribe((flag) => {
-            // flag && this.cdr.markForCheck();
+            flag && this.cdr.markForCheck();
             // flag && this.cdr.detectChanges();
         });
     }

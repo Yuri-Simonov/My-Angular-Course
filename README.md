@@ -34,4 +34,6 @@
 30. [Создание Observable в RxJS. Операторы of, from, fromEvent и interval в RxJS Angular](https://youtu.be/A-3UoqDqkyU);
 31. [Асинхронные пайпы в Angular. AsyncPipe in Angular](https://youtu.be/FYu84AqyQW8);
 32. [Механизм Change Detection в Angular. Принцип работы и его оптимизация](https://youtu.be/TP0PIFVQjJg);
-33. [Класс ChangeDetectorRef в Angular. Управление механизмом Change Detection]().
+33. [Класс ChangeDetectorRef в Angular. Управление механизмом Change Detection]();
+34. [Механизм Change Detection и дерево компонентов](https://youtu.be/q4fW8mUdNOc);
+35. [Механизм Change Detection без библиотеки Zone.js](https://youtu.be/b2GHxJNiqdg).

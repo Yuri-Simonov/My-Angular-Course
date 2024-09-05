@@ -11,7 +11,7 @@ import { ColorizeComponent } from '../colorize/colorize.component';
     standalone: true,
     imports: [ColorizeComponent],
     templateUrl: './logo.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LogoComponent extends ColorizeComponent {
     constructor(element: ElementRef, private cdr: ChangeDetectorRef) {

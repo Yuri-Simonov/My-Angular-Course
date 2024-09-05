@@ -13,7 +13,7 @@ import { ColorizeComponent } from '../colorize/colorize.component';
     standalone: true,
     imports: [AsyncPipe, ColorizeComponent],
     templateUrl: './articles.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticlesComponent extends ColorizeComponent {
     interval$: Observable<number> = interval(2000).pipe(

@@ -14,7 +14,7 @@ import { ColorizeComponent } from '../colorize/colorize.component';
     standalone: true,
     imports: [ArticlesComponent, SidebarComponent, ColorizeComponent],
     templateUrl: './main.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainComponent extends ColorizeComponent {
     signal = signal(0);

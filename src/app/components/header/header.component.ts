@@ -14,7 +14,7 @@ import { ColorizeComponent } from '../colorize/colorize.component';
     standalone: true,
     imports: [LogoComponent, NavigationComponent],
     templateUrl: './header.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent extends ColorizeComponent {
     @Input() counter: number = 0;

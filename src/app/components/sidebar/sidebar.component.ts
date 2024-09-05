@@ -7,7 +7,7 @@ import { ColorizeComponent } from '../colorize/colorize.component';
     standalone: true,
     imports: [ColorizeComponent],
     templateUrl: './sidebar.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarComponent extends ColorizeComponent {
     counter: number = 0;

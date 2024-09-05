@@ -8,10 +8,13 @@ import { Component, ElementRef } from '@angular/core';
 export class ColorizeComponent {
     ccsClass = 'colorize';
     body = document.body;
+    number: number = 0;
 
     constructor(protected element: ElementRef) {}
 
     colorize() {
+        this.number++;
+        console.log('colorize', this.number);
         const componentName = this.element.nativeElement.localName;
         const component = this.body.querySelector(componentName);
         component.classList.add(this.ccsClass);
