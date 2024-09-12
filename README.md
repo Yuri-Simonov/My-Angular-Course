@@ -36,4 +36,5 @@
 32. [Механизм Change Detection в Angular. Принцип работы и его оптимизация](https://youtu.be/TP0PIFVQjJg);
 33. [Класс ChangeDetectorRef в Angular. Управление механизмом Change Detection]();
 34. [Механизм Change Detection и дерево компонентов](https://youtu.be/q4fW8mUdNOc);
-35. [Механизм Change Detection без библиотеки Zone.js](https://youtu.be/b2GHxJNiqdg).
+35. [Механизм Change Detection без библиотеки Zone.js](https://youtu.be/b2GHxJNiqdg);
+36. [Декоратор Attribute. Оптимизация механизма Change Detection]().

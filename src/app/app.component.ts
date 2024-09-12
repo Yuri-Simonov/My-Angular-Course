@@ -2,35 +2,23 @@ import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
-    ElementRef,
 } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
-import { ColorizeComponent } from './components/colorize/colorize.component';
+import { ChildComponent } from './components/child/child.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [HeaderComponent, MainComponent, ColorizeComponent],
+    imports: [ChildComponent],
     templateUrl: './app.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent extends ColorizeComponent {
-    counter: number = 0;
+export class AppComponent {
+    name: string = 'Миша';
 
-    constructor(element: ElementRef, private cdr: ChangeDetectorRef) {
-        super(element);
-    }
-
-    handleClick() {
-        console.log('AppComponent', this.element);
-        this.counter++;
-    }
-
-    ngAfterViewInit() {
-        // this.cdr.detach();
-        // setTimeout(() => {
-        //     this.cdr.reattach();
-        // }, 10000);
+    constructor(private cdr: ChangeDetectorRef) {
+        setTimeout(() => {
+            this.name = 'Максим';
+            this.cdr.markForCheck();
+        }, 3000);
     }
 }

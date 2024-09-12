@@ -1,6 +1,10 @@
 @import url(./styles/font.scss);
-@import url(./styles/lesson-34.scss);
 
 html {
     font-family: Roboto;
+}
+
+body {
+    background-color: rgb(65, 65, 65);
+    color: white;
 }
