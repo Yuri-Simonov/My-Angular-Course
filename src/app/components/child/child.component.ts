@@ -1,4 +1,4 @@
-import { Attribute, Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-child',
@@ -7,10 +7,4 @@ import { Attribute, Component, Input } from '@angular/core';
     templateUrl: './child.component.html',
     styleUrl: './child.component.scss',
 })
-export class ChildComponent {
-    // @Input() name: string;
-
-    constructor(@Attribute('name') public name: string) {
-        console.log('this.name', this.name);
-    }
-}
+export class ChildComponent {}

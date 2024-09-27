@@ -1,12 +1,28 @@
 {
-  "editor.fontSize": 20,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.codeLensFontSize": 0,
-  "editor.inlayHints.fontSize": 0,
-  "editor.minimap.size": "proportional",
-  "editor.mouseWheelZoom": false,
-  "terminal.integrated.mouseWheelZoom": false,
-  "window.zoomLevel": 2
+    "editor.fontSize": 20,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeLensFontSize": 0,
+    "editor.inlayHints.fontSize": 0,
+    "editor.minimap.size": "proportional",
+    "editor.mouseWheelZoom": false,
+    "terminal.integrated.mouseWheelZoom": false,
+    "window.zoomLevel": 2,
+    "editor.inlayHints.enabled": "on",
+    "editor.parameterHints.enabled": true,
+    "editor.parameterHints.cycle": true,
+    "workbench.editor.languageDetectionHints": {
+        "notebookEditors": false,
+        "untitledEditors": false
+    },
+    "accessibility.verbosity.inlineChat": false,
+    "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+    "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+    "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+    "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "accessibility.signals.noInlayHints": {
+        "announcement": "off"
+    }
 }

@@ -1,2 +1,20 @@
-<app-child name="Вася"></app-child>
-<!-- <app-child [name]="name"></app-child> -->
+@if (users) {
+<p>Первый список</p>
+<ul>
+    @for (user of users; track $index) {
+    <li>{{ user.name }}</li>
+    }
+</ul>
+
+}
+
+<hr />
+
+@if (users$ | async; as users) {
+<p>Второй список</p>
+<ul>
+    @for (user of users; track $index) {
+    <li>{{ user.name }}</li>
+    }
+</ul>
+}
