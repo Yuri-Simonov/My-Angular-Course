@@ -37,4 +37,6 @@
 33. [Класс ChangeDetectorRef в Angular. Управление механизмом Change Detection]();
 34. [Механизм Change Detection и дерево компонентов](https://youtu.be/q4fW8mUdNOc);
 35. [Механизм Change Detection без библиотеки Zone.js](https://youtu.be/b2GHxJNiqdg);
-36. [Декоратор Attribute. Оптимизация механизма Change Detection]().
+36. [Декоратор Attribute. Оптимизация механизма Change Detection](https://youtu.be/6b_KklZmQ_w);
+37. [Сервисы в Angular. Создание и использование сервисов](https://youtu.be/oOrI3qm7tK8);
+38. [Паттерн Dependency injection. Injector и Providers. Иерархия инжекторов](https://youtu.be/mFem0yjCkn4).
