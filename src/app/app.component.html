@@ -1,9 +1,11 @@
-@if (users$ | async; as users) {
-<ul>
-    @for (user of users; track $index) {
-    <li>{{ user.name }}</li>
-    }
-</ul>
+<!-- @if(true) { @let title = data.one.two.three.title;
+
+<h1>{{ title }}</h1>
 }
 
-<app-child></app-child>
+<h1>{{ title }}</h1> -->
+
+@if((asyncData$ | async)?.one?.two?.three?.title; as title) {
+<h1>{{ title }}</h1>
+} @let asyncTitle = (asyncData$ | async)?.one?.two?.three?.title;
+<h1>{{ asyncTitle }}</h1>
