@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { RandomService } from '../../services/random.service';
+import { Component, Inject } from '@angular/core';
+import { TOKEN } from '../../shared/tokens/tokens';
 
 @Component({
     selector: 'app-child',
     imports: [],
     templateUrl: './child.component.html',
     styleUrl: './child.component.scss',
-    providers: [RandomService]
+    providers: [{ provide: TOKEN, useValue: 123 }],
 })
 export class ChildComponent {
-    constructor(private randomService: RandomService) {
-        console.log(this.randomService.getRandomNumber());
+    constructor(@Inject(TOKEN) private token: number) {
+        // console.log('this.token', this.token);
     }
 }
