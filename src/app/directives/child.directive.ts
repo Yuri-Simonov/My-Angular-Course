@@ -6,6 +6,6 @@ import { RandomService } from '../services/random.service';
 })
 export class ChildDirective {
     constructor(@Host() @Optional() private randomService: RandomService) {
-        console.log('ChildDirective', this.randomService);
+        // console.log('ChildDirective', this.randomService);
     }
 }
