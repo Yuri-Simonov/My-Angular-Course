@@ -1,10 +1,15 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ChildComponent } from './components/child/child.component';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { DataService } from './services/data.service';
 
 @Component({
     selector: 'app-root',
-    imports: [ChildComponent],
     templateUrl: './app.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+    private dataService = inject(DataService);
+
+    ngOnInit() {
+        this.dataService.getData().subscribe((data) => console.log(data));
+    }
+}
