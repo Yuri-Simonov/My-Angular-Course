@@ -39,4 +39,11 @@
 35. [Механизм Change Detection без библиотеки Zone.js](https://youtu.be/b2GHxJNiqdg);
 36. [Декоратор Attribute. Оптимизация механизма Change Detection](https://youtu.be/6b_KklZmQ_w);
 37. [Сервисы в Angular. Создание и использование сервисов](https://youtu.be/oOrI3qm7tK8);
-38. [Паттерн Dependency injection. Injector и Providers. Иерархия инжекторов](https://youtu.be/mFem0yjCkn4).
+38. [Паттерн Dependency injection. Injector и Providers. Иерархия инжекторов](https://youtu.be/mFem0yjCkn4);
+39. [Обновление до 19-ой версии. Директива @let. Standalone по умолчанию](https://youtu.be/5p6IyZPEk1A);
+40. [Providers в Angular: useValue, useClass, useFactory, useExisting и InjectionToken](https://youtu.be/imUcdrYFTxs);
+41. [Декораторы Dependency Injection: @Optional, @Self, @SkipSelf и @Host](https://youtu.be/y9kMzhq2ERM);
+42. [Провайдеры представления компонента. viewProviders](https://youtu.be/yeda2TzFxwM);
+43. [Функция inject. inject vs constructor. Класс HostAttributeToken](https://youtu.be/GpRz_8EZvZY);
+44. [Angular Интерцепторы. Зачем нужны и как их использовать. Angular interceptors](https://youtu.be/0fft0ak2l-s);
+45. [Tree-shaking сервисов в Angular]().
