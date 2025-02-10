@@ -1,0 +1,33 @@
+<!-- <input type="text" name="username" id="username" [(ngModel)]="username" /> -->
+<!-- <input
+    type="text"
+    name="username"
+    id="username"
+    ngModel
+    #exampleInput="ngModel"
+    minlength="3"
+/> -->
+
+<!-- <p>{{ exampleInput.value }}</p> -->
+<!-- <p>dirty: {{ exampleInput.dirty }}</p> -->
+
+<form #exampleForm="ngForm" (ngSubmit)="onSubmit(exampleForm)">
+    <label for="username">Имя пользователя:</label>
+    <input
+        type="text"
+        id="username"
+        name="username"
+        ngModel
+        minlength="3"
+        #exampleInput="ngModel"
+    />
+    <button type="submit">Отправить</button>
+    <!-- <button type="reset" (onReset)="exampleForm.onReset()">Сбросить</button> -->
+    <button
+        type="button"
+        (click)="exampleForm.resetForm({ username: 'Измененное значение' })"
+    >
+        Сбросить
+    </button>
+</form>
+<p>Форма отправлена: {{ exampleForm.submitted }}</p>

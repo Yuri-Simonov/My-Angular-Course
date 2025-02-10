@@ -5,9 +5,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root',
 })
 export class DataService {
-    constructor(private http: HttpClient) {
-        // console.log('DataService');
-    }
+    constructor(private http: HttpClient) {}
 
     getData() {
         return this.http.get(

@@ -1,13 +1,48 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { DataService } from './services/data.service';
+import {
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    inject,
+    ViewChild,
+} from '@angular/core';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    // providers: [DataService],
+    imports: [FormsModule],
 })
 export class AppComponent {
-    // private dataService = inject(DataService);
-    // constructor(private dataService: DataService) {}
+    username: string = '';
+
+    @ViewChild('exampleForm') exampleForm: NgForm;
+    @ViewChild('exampleInput') exampleInput: NgModel;
+
+    private cdr = inject(ChangeDetectorRef);
+
+    ngOnInit() {
+        setTimeout(() => {
+            this.username = 'John Doe';
+            this.cdr.markForCheck();
+        }, 3000);
+    }
+
+    ngDoCheck() {
+        // console.log('this.username', this.username);
+    }
+
+    ngAfterViewInit() {
+        this.exampleForm.valueChanges?.subscribe((value) => {
+            console.log('exampleForm value', value);
+        });
+        this.exampleInput.valueChanges?.subscribe((value) => {
+            console.log('exampleInput value', value);
+        });
+    }
+
+    onSubmit(formValue: NgForm) {
+        console.log('formValue', formValue);
+    }
 }
