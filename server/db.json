@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": "9521",
+      "name": "Вася",
+      "lastName": "Пупкин",
+      "email": "pupok@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "Просто Вася",
+      "agree": true
+    },
+    {
+      "id": "9359",
+      "name": "Вася",
+      "lastName": "Пупкин",
+      "email": "pupok2@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "",
+      "agree": true
+    },
+    {
+      "id": "bed5",
+      "name": "Вася",
+      "lastName": "Пупкин",
+      "email": "pupok3@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "",
+      "agree": true
+    },
+    {
+      "id": "991f",
+      "name": "Вася",
+      "lastName": "Пупкин",
+      "email": "pupok5@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "",
+      "agree": true
+    },
+    {
+      "id": "dfb5",
+      "name": "asd",
+      "lastName": "sad",
+      "email": "ppr@mail.ru",
+      "gender": "female",
+      "country": "us",
+      "comment": "adsad",
+      "agree": true
+    },
+    {
+      "id": "7d78",
+      "name": "Вася",
+      "lastName": "Пупкин",
+      "email": "pupokr@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "",
+      "agree": true
+    },
+    {
+      "id": "fe00",
+      "name": "asda",
+      "lastName": "2",
+      "email": "rr@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "",
+      "agree": true
+    },
+    {
+      "id": "0db0",
+      "name": "asda",
+      "lastName": "2",
+      "email": "rr2@mail.ru",
+      "gender": "male",
+      "country": "ru",
+      "comment": "",
+      "agree": true
+    }
+  ]
+}
