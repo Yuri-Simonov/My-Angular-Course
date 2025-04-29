@@ -1,33 +1,121 @@
-<!-- <input type="text" name="username" id="username" [(ngModel)]="username" /> -->
-<!-- <input
-    type="text"
-    name="username"
-    id="username"
-    ngModel
-    #exampleInput="ngModel"
-    minlength="3"
-/> -->
+@let emailTaken = emailRef.hasError("emailTaken");
 
-<!-- <p>{{ exampleInput.value }}</p> -->
-<!-- <p>dirty: {{ exampleInput.dirty }}</p> -->
+<h1>Создание пользователя</h1>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div>
+        <label for="name">Имя<span>*</span>:</label>
+        <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Введите имя"
+            [(ngModel)]="user.name"
+            required
+            #nameRef="ngModel"
+        />
+        @if (checkFieldStatus(nameRef)) {
+            <p class="error">Имя обязательно</p>
+        }
+    </div>
 
-<form #exampleForm="ngForm" (ngSubmit)="onSubmit(exampleForm)">
-    <label for="username">Имя пользователя:</label>
-    <input
-        type="text"
-        id="username"
-        name="username"
-        ngModel
-        minlength="3"
-        #exampleInput="ngModel"
-    />
-    <button type="submit">Отправить</button>
-    <!-- <button type="reset" (onReset)="exampleForm.onReset()">Сбросить</button> -->
-    <button
-        type="button"
-        (click)="exampleForm.resetForm({ username: 'Измененное значение' })"
-    >
-        Сбросить
-    </button>
+    <div>
+        <label for="lastName">Фамилия<span>*</span>:</label>
+        <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Введите фамилию"
+            [(ngModel)]="user.lastName"
+            required
+            #lastNameRef="ngModel"
+        />
+        @if (checkFieldStatus(lastNameRef)) {
+            <p class="error">Фамилия обязательна</p>
+        }
+    </div>
+
+    <div>
+        <label for="email">Email<span>*</span>:</label>
+        <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Введите email"
+            [(ngModel)]="user.email"
+            required
+            email
+            #emailRef="ngModel"
+        />
+        @if (checkFieldStatus(emailRef) && !emailTaken) {
+            <p class="error">Email заполнен неверно</p>
+        }
+        @if (emailTaken) {
+            <p class="error">Этот email уже используется</p>
+        }
+    </div>
+
+    <div>
+        <label class="default">Пол:</label>
+        <div>
+            <label
+                ><input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    [(ngModel)]="user.gender"
+                />
+                Мужской</label
+            >
+            <label
+                ><input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    [(ngModel)]="user.gender"
+                />
+                Женский</label
+            >
+        </div>
+    </div>
+
+    <div>
+        <label class="default">Страна:</label>
+        <select name="country" [(ngModel)]="user.country">
+            <option value="ru">Россия</option>
+            <option value="us">США</option>
+            <option value="de">Германия</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="comment">Комментарий:</label>
+        <textarea
+            name="comment"
+            id="comment"
+            placeholder="Введите комментарий"
+            [(ngModel)]="user.comment"
+        ></textarea>
+    </div>
+
+    <div>
+        <label>
+            <input
+                type="checkbox"
+                name="agree"
+                [(ngModel)]="user.agree"
+                required
+                #agreeRef="ngModel"
+            />
+            Согласен с условиями использования<span>*</span>
+        </label>
+        @if (agreeRef.invalid) {
+            <p class="error">Необходимо подтвердить согласие</p>
+        }
+    </div>
+    <div class="buttons">
+        <button [disabled]="!enableSubmit()">Создать</button>
+        <button type="button" (click)="userForm.resetForm(initialUser)">
+            Сбросить
+        </button>
+    </div>
 </form>
-<p>Форма отправлена: {{ exampleForm.submitted }}</p>

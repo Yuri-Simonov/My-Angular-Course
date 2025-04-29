@@ -24,5 +24,6 @@
     "typescript.inlayHints.enumMemberValues.enabled": true,
     "accessibility.signals.noInlayHints": {
         "announcement": "off"
-    }
+    },
+    "cSpell.words": ["toastr"]
 }
