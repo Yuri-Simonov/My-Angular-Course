@@ -46,4 +46,7 @@
 42. [Провайдеры представления компонента. viewProviders](https://youtu.be/yeda2TzFxwM);
 43. [Функция inject. inject vs constructor. Класс HostAttributeToken](https://youtu.be/GpRz_8EZvZY);
 44. [Angular Интерцепторы. Зачем нужны и как их использовать. Angular interceptors](https://youtu.be/0fft0ak2l-s);
-45. [Tree-shaking сервисов в Angular]().
+45. [Tree-shaking сервисов в Angular](https://youtu.be/kVYPhHMrAwA);
+46. [Шаблонные формы в Angular. Template-driven Forms in Angular](https://youtu.be/WpftjPrERHA);
+47. [Практика. Шаблонные формы. Сервисы. json-server](https://youtu.be/lCsjzavFHwg);
+48. [Реактивные формы в Angular. Reactive Forms in Angular](https://youtu.be/CAfqkH9ACXk).
