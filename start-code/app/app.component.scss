@@ -1,105 +1,47 @@
 :host {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 60vw;
     margin: 12px auto 24px;
+    width: 400px;
 
     h1 {
-        text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    div {
-        max-width: 400px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    label {
-        margin-left: 12px;
-        cursor: pointer;
-
-        &.default {
-            cursor: default;
-        }
-
-        & > * {
-            cursor: pointer;
-        }
-
-        span {
-            position: relative;
-            top: -6px;
-            color: red;
-            font-size: 10px;
-        }
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 16px;
     }
 
     input,
-    select,
-    textarea {
+    button {
         border: 2px solid gray;
         padding: 6px;
-        margin: 6px 0;
-        width: 100%;
-
         border-radius: 6px;
-        margin-bottom: 6px;
         outline: none;
+        margin-bottom: 6px;
     }
 
-    select {
+    input {
+        width: 100%;
+    }
+
+    button {
+        max-width: fit-content;
         cursor: pointer;
-    }
 
-    textarea {
-        margin-bottom: 0;
-        resize: none;
-    }
-
-    *:required.ng-invalid.ng-touched,
-    *:required.ng-invalid.ng-dirty {
-        border-color: red;
-    }
-
-    *:required.ng-valid.ng-touched,
-    *:required.ng-valid.ng-dirty {
-        border-color: rgb(0, 255, 0);
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-        width: auto;
-        margin-right: 6px;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-
-        button {
-            cursor: pointer;
-            padding: 6px 18px;
-            margin-top: 6px;
-
-            &:disabled {
-                cursor: default;
-            }
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: #abbece;
         }
     }
 
-    .error {
-        color: red;
-        font-size: 10px;
-        margin-top: -4px;
-        margin-left: 12px;
+    *.ng-invalid {
+        border-color: red;
+    }
+
+    *.ng-valid {
+        border-color: rgb(0, 255, 0);
     }
 }
