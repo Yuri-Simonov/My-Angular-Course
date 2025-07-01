@@ -25,5 +25,5 @@
     "accessibility.signals.noInlayHints": {
         "announcement": "off"
     },
-    "cSpell.words": ["toastr"]
+    "cSpell.words": ["toastr", "инпут"]
 }

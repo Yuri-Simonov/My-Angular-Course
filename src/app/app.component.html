@@ -1,42 +1,20 @@
-<!-- <input type="text" [formControl]="inputField" />
+@let secondInput = reactiveForm.get("secondInput");
 
-<p>Состояние valid: {{ inputField.valid }}</p>
-<p>Текущее значение: {{ inputField.value }}</p>
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm.value)">
+    <h2>Реактивная форма</h2>
+    <input type="text" formControlName="firstInput" />
+    <app-custom-input formControlName="secondInput"></app-custom-input>
 
-<button (click)="inputField.setValue('')">Обновить значение</button>
-<button (click)="inputField.reset()">Сбросить значение</button> -->
-
-<form [formGroup]="exampleFormFB">
-    <h2>Личные данные:</h2>
-    <label for="name">Имя: </label>
-    <input id="name" type="text" formControlName="name" />
-    <label for="age">Возраст: </label>
-    <input id="age" type="text" formControlName="age" />
-
-    <div formGroupName="address">
-        <h2>Адрес:</h2>
-        <label for="street">Улица: </label>
-        <input id="street" type="text" formControlName="street" />
-        <label for="city">Город: </label>
-        <input id="city" type="text" formControlName="city" />
-    </div>
-
-    <div formArrayName="pets">
-        <h2>Домашние животные</h2>
-
-        @for (pet of pets.controls; track $index; let i = $index) {
-            <div>
-                <label for="pet-{{ i }}">Питомец:</label>
-                <input id="pet-{{ i }}" type="text" [formControlName]="i" />
-            </div>
-        }
-
-        <button type="button" (click)="addPet()">Добавить питомца</button>
-    </div>
+    <button>Отправить</button>
+    <button type="button" (click)="secondInput?.disabled ? secondInput?.enable() : secondInput?.disable()">
+        Переключить disabled
+    </button>
 </form>
 
-<!-- <button (click)="exampleForm.setValue({ name: 'Вася', age: 25 })">
-    Метод setValue
-</button>
-<button (click)="exampleForm.patchValue({ name: 'Олег' })">Метод patchValue</button> -->
-<!-- <button (click)="exampleForm.reset()">Метод reset</button> -->
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <h2>Шаблонная форма</h2>
+    <input type="text" [(ngModel)]="templateForm.firstInput" name="firstInput" />
+    <app-custom-input [(ngModel)]="templateForm.secondInput" name="secondInput" minlength="5"></app-custom-input>
+
+    <button>Отправить</button>
+</form>

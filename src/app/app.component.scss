@@ -4,44 +4,4 @@
     gap: 10px;
     margin: 12px auto 24px;
     width: 400px;
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        margin-top: 16px;
-    }
-
-    input,
-    button {
-        border: 2px solid gray;
-        padding: 6px;
-        border-radius: 6px;
-        outline: none;
-        margin-bottom: 6px;
-    }
-
-    input {
-        width: 100%;
-    }
-
-    button {
-        max-width: fit-content;
-        cursor: pointer;
-
-        transition: all 0.3s ease;
-        &:hover {
-            background-color: #abbece;
-        }
-    }
-
-    *.ng-invalid {
-        border-color: red;
-    }
-
-    *.ng-valid {
-        border-color: rgb(0, 255, 0);
-    }
 }
